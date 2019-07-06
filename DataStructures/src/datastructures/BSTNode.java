@@ -55,7 +55,7 @@ public class BSTNode {
         }
     }
 
-     /**
+    /**
      * This can be used to print the tree (order from small to big)
      *
      */
@@ -68,4 +68,28 @@ public class BSTNode {
             right.printInOrder();
         }
     }
+
+    /**
+     * This can be used to find the larget value in the tree
+     *
+     */
+    public int max() {
+        if (right == null) {
+            return data;
+        } else {
+            return right.max();
+        }
+    }
+    /**
+     * This can be used to find the smallest value in the tree
+     *
+     */
+    public int min() {
+        if (left == null) {
+            return data;
+        } else {
+            return left.min();
+        }
+    }
+
 }
