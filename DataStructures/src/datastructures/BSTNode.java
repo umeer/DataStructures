@@ -70,7 +70,23 @@ public class BSTNode {
     }
 
     /**
-     * This can be used to find the larget value in the tree
+     * This can be used to get the string of the tree (order from small to big)
+     *
+     */
+    public String toStringInOrder() {
+        String output = "";
+        if (left != null) {
+            output = (output.length() == 0) ? output + left.toStringInOrder() : output + " " + left.toStringInOrder();
+        }
+        output = (output.length() == 0) ? output + data : output + " " + data;
+        if (right != null) {
+            output = output + " " + right.toStringInOrder();
+        }
+        return output;
+    }
+
+    /**
+     * This can be used to find the max value in the tree
      *
      */
     public int max() {
@@ -80,6 +96,7 @@ public class BSTNode {
             return right.max();
         }
     }
+
     /**
      * This can be used to find the smallest value in the tree
      *

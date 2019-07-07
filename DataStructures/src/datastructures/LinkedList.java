@@ -15,7 +15,7 @@ class LinkedNode {
 
 public class LinkedList {
 
-    LinkedNode head;
+    private LinkedNode head;
 
     /**
      * This function adds a new node at the end of the linked list
@@ -53,9 +53,9 @@ public class LinkedList {
         if (head == null) {
             return;
         }
-        
-        if(head.data == data){
-        head = head.next;
+
+        if (head.data == data) {
+            head = head.next;
         }
 
         LinkedNode current = head;
@@ -66,6 +66,19 @@ public class LinkedList {
             }
             current = current.next;
         }
+    }
+
+    /**
+     * This function return the string of all the elements in the list
+     */
+    public String toStringHeadToTail() {
+        String output = "";
+        LinkedNode current = head;
+        while (current != null){
+            output = (output.length() == 0) ? output + current.data : output + " " + current.data;
+            current = current.next;
+        } 
+        return output;
     }
 
 }
