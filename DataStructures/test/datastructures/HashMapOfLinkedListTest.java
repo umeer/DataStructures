@@ -42,6 +42,17 @@ public class HashMapOfLinkedListTest {
         assertEquals(((String)list.get(2)).compareTo("A"), 0);
     }
 
+    @Test
+    public void testToStringHashMap() {
+        HashMapOfLinkedList map = new HashMapOfLinkedList();
+        map.add("m","Umeer");
+        map.add("a","Z");
+        map.add("p","A");
+
+        System.out.println(map.toStringHashMap());
+        assertEquals(map.toStringHashMap().compareTo("p a m"), 0);
+        
+    }
 
     
 }
