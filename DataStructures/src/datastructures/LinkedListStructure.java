@@ -13,7 +13,7 @@ class LinkedNode {
     }
 }
 
-public class LinkedList {
+public class LinkedListStructure {
 
     private LinkedNode head;
 

@@ -6,11 +6,11 @@ import static org.junit.Assert.*;
 public class LinkedListTest {
 
     /**
-     * Test of custom class LinkedList.
+     * Test of custom class LinkedListStructure.
      */
     @Test
     public void testAppend() {
-        LinkedList list = new LinkedList();
+        LinkedListStructure list = new LinkedListStructure();
         list.append(1);
         list.append(2);
        assertEquals(list.toStringHeadToTail().compareTo("1 2"), 0);
@@ -18,7 +18,7 @@ public class LinkedListTest {
     
     @Test
     public void testPrepend() {
-        LinkedList list = new LinkedList();
+        LinkedListStructure list = new LinkedListStructure();
         list.append(1);
         list.append(2);
         list.prepend(0);
@@ -27,13 +27,13 @@ public class LinkedListTest {
     
      @Test
     public void testEmpty() {
-        LinkedList list = new LinkedList();
+        LinkedListStructure list = new LinkedListStructure();
        assertEquals(list.toStringHeadToTail().compareTo(""), 0);
     }
     
     @Test
     public void testDelete() {
-        LinkedList list = new LinkedList();
+        LinkedListStructure list = new LinkedListStructure();
         list.append(1);
         list.append(2);
         list.prepend(0);
